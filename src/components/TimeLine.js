@@ -1,9 +1,9 @@
 import React from "react";
 
-function TimeLine({ data, id }) {
+function TimeLine({ data }) {
   return (
-    <div id={id} className="timeline">
-      <h1>Education</h1>
+    <div id="education" className="timeline">
+      <h1 className="timeline-title">Education</h1>
       {data.map((event, index) => (
         <div className="timeline-event" key={index}>
           <div className="event">
@@ -20,5 +20,5 @@ function TimeLine({ data, id }) {
     </div>
   );
 }
-export default TimeLine;
 
+export default TimeLine;

@@ -1,79 +1,74 @@
 import photo from "../assets/images/myimage.jpeg";
-import card1 from "../assets/images/card_1.png";
-import card3 from "../assets/images/card_3.png"
-
-
+import card1 from "../assets/images/herseyburada.png";
+import card2 from "../assets/images/ramadan.png";
 
 export const experienceData = [
   {
-    date: "2013-2014",
+    date: "07/2024 – Present",
     info: {
-      company: "Google",
-      job: "Front-end developer / php programmer",
+      company: "Digigo Group",
+      job: "Front-end Developer | Freelance",
       description:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
+        "Developed a responsive e-commerce platform using React, integrating APIs for product data, shopping cart, and secure checkout. Utilized React hooks for state management and Tailwind CSS for mobile optimization.Implemented form validation and user authentication for enhanced security",
     },
   },
   {
-    date: "2012",
+    date: "06/2024 – Present",
     info: {
-      company: "Twitter",
-      job: "Web developer",
+      company: "Tripsee",
+      job: "Front-end Developer",
       description:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
+        "Responsible for building and optimizing user interfaces, developing responsive layouts, and enhancing user experience using technologies like Next.js, Tailwind CSS, TypeScript, Redux, and Git. Additionally worked with REST APIs, server-side rendering.",
+    },
+  },
+  {
+    date: "11/2023 – 12/2023",
+    info: {
+      company: "4SİM / C4IR Azerbaijan",
+      job: "Front-end Developer | Intern",
+      description:
+        "Collaborated with a team at 4SIM Azerbaijan as a front-end developer,contributing to the design and implementation of user interfaces for web applications, ensuring responsiveness and optimal user experience.",
     },
   },
 ];
 
 export const timeLineData = [
   {
-    date: 2001,
-    title: "Title 0",
-    text: "Elit voluptate ad nostrud laboris. Elit incididunt mollit enim enim id id laboris dolore et et mollit. Mollit adipisicing ullamco exercitation ullamco proident aute enim nisi. Dolore eu fugiat consectetur nulla sunt Lorem ex ad. Anim eiusmod do tempor fugiat minim do aliqua amet ex dolore velit.\r\n",
+    date: "05/2023 – 12/2023",
+    title: "Front-end Development",
+    text: " IT HUB Azerbaijan | EPAM UpSkill\r\n",
   },
   {
-    date: 2000,
-    title: "Title 1",
-    text: "Et irure culpa ad proident labore excepteur elit dolore. Quis commodo elit culpa eiusmod dolor proident non commodo excepteur aute duis duis eu fugiat. Eu duis occaecat nulla eiusmod non esse cillum est aute elit amet cillum commodo.\r\n",
+    date: "09/2022 – 05/2026",
+    title: "Information Technology",
+    text: "Azerbaijan State University of Economics - Bachelor\r\n",
   },
   {
-    date: 2012,
-    title: "Title 2",
-    text: "Labore esse tempor nisi non mollit enim elit ullamco veniam elit duis nostrud. Enim pariatur ullamco dolor eu sunt ad velit aute eiusmod aliquip voluptate. Velit magna labore eiusmod eiusmod labore amet eiusmod. In duis eiusmod commodo duis. Exercitation Lorem sint do aliquip veniam duis elit quis culpa irure quis nulla. Reprehenderit fugiat amet sint commodo ex.\r\n",
+    date: "02/2024 – 08/2024",
+    title: "Front-end Development",
+    text: "ATL Academy\r\n",
   },
 ];
 
 export const portfolioData = [
   {
-    title: "Project 1",
-    category: "ui",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    img: card1,
-    url: "https://picsum.photos/200/300",
+    title: "HerseyBurada",
+    category: "e-commerce",
+    text: "HerseyBurada is a modern e-commerce platform that offers a seamless shopping experience, focusing on intuitive UI and fast performance. Users can browse products, add them to a cart, and proceed to checkout effortlessly.",
+    img: card1, 
+    url: "https://herseyburada.netlify.app/",
   },
-  {
-    title: "Project 2",
-    category: "code",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    img: card3,
-    url: "https://picsum.photos/200/300",
-  },
-  {
-    title: "Real-Time Sentiment Analysis of Social Media Data",
-    category: "ui",
-    text: "In today's digital age, social media platforms are a treasure trove of information, opinions, and trends. This project aims to leverage the power of big data to perform real-time sentiment analysis on social media data. The objective is to process vast amounts of text-based data from platforms like Twitter, Facebook, and Instagram to understand the collective sentiment of users",
-    img: card1,
-    url: "https://www.medadata.com.au/",
-  },
-  {
-    title: "Project 4",
-    category: "code",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    img: card3,
-    url: "https://picsum.photos/200/300",
-  },
-];
 
+  {
+    title: "Ramadan Planner",
+    category: "code",
+    text: "Ramadan Planner is a spiritual and productivity-focused website built to help users manage their daily goals, prayers, and activities throughout the holy month of Ramadan. It features a planner, motivational quotes, and reminders to stay connected with faith.",
+    img: card2, 
+    url: "https://ramadanwebsite.netlify.app/",
+  },
+
+ 
+];
 
 export const feedbackData = [
   {
@@ -95,5 +90,3 @@ export const feedbackData = [
     },
   },
 ];
-
-

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
 import Box from "../components/Box";
 
@@ -28,11 +28,11 @@ const Address = () => {
         </Link>
       </div>
       <div className="contacts">
-        <FaTwitter color="#26C17E" size={30} />
+      <FaGithub color="#26C17E" size={30} />
         <div>
-          <h3>Twitter</h3>
-          <Link to="https://twitter.com/wordpress">
-            <span className="link">https://twitter.com/wordpress</span>
+          <h3>Github</h3>
+          <Link to="https://github.com/AmrahovaDilber">
+            <span className="link">https://github.com</span>
           </Link>
         </div>
       </div>
@@ -40,7 +40,7 @@ const Address = () => {
         <BsLinkedin color="#26C17E" size={30} />
         <div>
           <h3>LinkedIn</h3>
-          <Link to="https://www.linkedin.com/in/dilb%C9%99r-%C9%99mrahova-12b384275/">
+          <Link to="https://www.linkedin.com/in/dilb%C9%99r-%C9%99mrahova/">
             <span className="link">
               https://www.linkedin.com/in/dilberamrahova
             </span>

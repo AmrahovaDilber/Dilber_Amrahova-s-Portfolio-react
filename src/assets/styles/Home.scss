@@ -1,9 +1,14 @@
 @import "_variables.scss";
+@import "_mediaQuery.scss";
 
 .container {
-  background: url(../images/home_bg.png) no-repeat center/cover;
+  // background: url(../images/home_bg.png) no-repeat center/cover;
   max-width: 100%;
+ width:1500px;
+ padding-right:20px;
   height: auto;
+  padding-left: 320px;
+
 
   &__photobox {
     background-color: #0007;
@@ -15,14 +20,36 @@
     margin: auto;
     padding: auto;
   }
+  
 }
 
 .photo-box .photo-box__class1 {
-      font-size: 2.5em;
-    font-weight: 43rem;
-    line-height: 54px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: $white-color;
-    margin-bottom: 0.5rem;
+  font-size: 2.5em;
+  font-weight: 43rem;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: $white-color;
+  margin-bottom: 0.5rem;
+}
+
+.home__photobox {
+  background: url(../images/home_bg.png) no-repeat center/cover;
+  background-color: #0007;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: auto;
+}
+
+
+
+@include tablet {
+  .container{
+    padding-left:100px;
   }
+
+}

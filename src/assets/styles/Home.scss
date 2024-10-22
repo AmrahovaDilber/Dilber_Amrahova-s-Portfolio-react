@@ -1,15 +1,20 @@
 @import "_variables.scss";
 @import "_mediaQuery.scss";
 
-.container {
-  // background: url(../images/home_bg.png) no-repeat center/cover;
+.container{
   max-width: 100%;
- width:1500px;
- padding-right:20px;
+  width: 1500px;
+  padding-right: 20px;
   height: auto;
   padding-left: 320px;
+}
 
 
+.home_container {
+  // background: url(../images/home_bg.png) no-repeat center/cover;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
   &__photobox {
     background-color: #0007;
     width: 100vw;
@@ -19,8 +24,8 @@
     align-items: center;
     margin: auto;
     padding: auto;
+    z-index: 1; 
   }
-  
 }
 
 .photo-box .photo-box__class1 {
@@ -38,18 +43,50 @@
   background-color: #0007;
   width: 100vw;
   height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: auto;
   padding: auto;
+
 }
 
 
 
-@include tablet {
-  .container{
-    padding-left:100px;
-  }
+.home {
+  &__photobox {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../images/home_bg.png) no-repeat center/cover;
+    }
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); 
+    }
+  }
+}
+
+@include tablet {
+  .container {
+    padding-left: 100px;
+  }
 }

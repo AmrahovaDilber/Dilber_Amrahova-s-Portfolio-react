@@ -43,10 +43,10 @@ const Skills = () => {
   };
 
   return (
-    <Box id="skills">
+    <Box id="skills" title="Skills" >
       <div className="skills-section">
         <div className="skills-head">
-          <h2>Skills</h2>
+          <h></h>
           <button className="button" onClick={() => setSkillsOpen(!skillOpen)}>
             <FontAwesomeIcon icon={faEdit} color="white" />
             <p className="button__text">Open edit</p>

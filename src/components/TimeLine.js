@@ -1,9 +1,10 @@
 import React from "react";
+import Box from "./Box";
 
 function TimeLine({ data }) {
   return (
-    <div id="education" className="timeline">
-      <h1 className="timeline-title">Education</h1>
+    <Box id="education" title="Education" className="timeline">
+    
       {data.map((event, index) => (
         <div className="timeline-event" key={index}>
           <div className="event">
@@ -17,7 +18,7 @@ function TimeLine({ data }) {
           </div>
         </div>
       ))}
-    </div>
+    </Box>
   );
 }
 

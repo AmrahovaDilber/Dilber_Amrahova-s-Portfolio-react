@@ -42,7 +42,7 @@ const Address = () => {
           <h3>LinkedIn</h3>
           <Link to="https://www.linkedin.com/in/dilb%C9%99r-%C9%99mrahova/">
             <span className="link">
-              https://www.linkedin.com/in/dilberamrahova
+              https://www.linkedin.com
             </span>
           </Link>
         </div>

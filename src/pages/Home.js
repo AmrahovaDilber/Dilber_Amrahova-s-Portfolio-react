@@ -2,7 +2,7 @@ import PhotoBox from "../components/PhotoBox";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import "../assets/styles/Home.scss";
-import DownloadCv from "../components/DownloadCv";
+
 
 const Home = () => {
   const navigate = useNavigate();

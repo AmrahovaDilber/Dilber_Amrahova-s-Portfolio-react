@@ -11,7 +11,7 @@ export const router = createBrowserRouter([
     element: <Home></Home>
   },
   {
-    path: "/inner",
+    path: "inner",
     element: <Inner></Inner>
   },
 ]);

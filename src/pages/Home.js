@@ -9,7 +9,9 @@ const Home = () => {
   
   const handleKnowMoreClick = () => {
     navigate("/inner");
-  };
+  }
+
+  
 
   return (
     <section className="home">

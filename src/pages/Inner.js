@@ -10,6 +10,7 @@ import Skills from "../components/Skills.js";
 import Back from "../components/BackToTop.js";
 import "../assets/styles/Inner.scss";
 import { experienceData, feedbackData, portfolioData ,timeLineData} from "../utils/data.js";
+import ContactMe from "../components/ContactMe.js";
 
 const Inner = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -28,7 +29,12 @@ const Inner = () => {
         <Expertise data={experienceData} />
         <Skills></Skills>
         <Portfolio data={portfolioData} />
+        <div style={{display:"flex",justifyContent:"space-between",gap:"100px"}}>
+
         <Address></Address>
+        <ContactMe></ContactMe>
+        </div>
+     
         <Feedback data={feedbackData} />
         {/* Back-to-top button */}
         <Back></Back>

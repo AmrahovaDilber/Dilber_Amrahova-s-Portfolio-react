@@ -14,7 +14,7 @@ const Address = () => {
   };
 
   return (
-    <Box id="contacts" title="Contacts" >
+    <Box id="contacts" title="Contact Me" >
       <div className="contacts">
         <FaPhoneAlt color="#26C17E" size={30} />
         <Link to="tel:+994 51 548 92 72">

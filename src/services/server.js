@@ -7,6 +7,7 @@ export const server = () =>
     routes() {
       this.urlPrefix = "http://localhost:3000";
       this.namespace = "api";
+      this.passthrough('https://api.emailjs.com/**');
       // this.get(
       //   "/educations",
       //   (schema, request) => {

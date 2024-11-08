@@ -8,34 +8,37 @@ import { textVariant } from '../utils/motion'
 function Expertise({ data }) {
   return (
     <Box id="experience" title="Experience">
-      <motion.div variants={textVariant()}>
-        <VerticalTimeline layout="1-column">
-          <ul className="experience-list">
-            {data.map((experience, index) => (
-              <VerticalTimelineElement
-                key={index}
-                className="vertical-timeline-element--work"
-
-                contentArrowStyle={{ borderRight: '7px solid #fff' }}
-             
-                iconStyle={{ background: ' rgba(38, 193, 126, 1)', color: '#fff' }}
-              >
-            <li className="experience-item">
-                  <div className="experience-details">
-                    <h3 className="experience-date">{experience.date}</h3>
-                    <h4 className="experience-job">{experience.info.job}</h4>
-                    <p className="experience-company">{experience.info.company}</p>
-                    <p className="experience-description">
-                      {experience.info.description}
-                    </p>
-                  </div>
-                </li>
-              </VerticalTimelineElement>
-            ))}
-          </ul>
-        </VerticalTimeline>
-      </motion.div>
-    </Box>
+    <motion.div variants={textVariant()}>
+      <VerticalTimeline layout="1-column">
+        <ul className="experience-list">
+          {data.map((experience, index) => (
+            <VerticalTimelineElement
+            key={index}
+            className="vertical-timeline-element--work"
+            contentArrowStyle={{ borderRight: '7px solid #fff' }}
+            iconStyle={{
+              background: 'rgba(38, 193, 126, 1)', 
+              color: '#fff',
+              border: '3px solid #fff',  // Optional: adds a border around the icon
+              borderRadius: '50%',  // Ensures the icon is round
+            }}
+            >
+              <li className="experience-item">
+                <div className="experience-details">
+                  <h3 className="experience-date">{experience.date}</h3>
+                  <h4 className="experience-job">{experience.info.job}</h4>
+                  <p className="experience-company">{experience.info.company}</p>
+                  <p className="experience-description">
+                    {experience.info.description}
+                  </p>
+                </div>
+              </li>
+            </VerticalTimelineElement>
+          ))}
+        </ul>
+      </VerticalTimeline>
+    </motion.div>
+  </Box>
   );
 }
 

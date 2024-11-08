@@ -46,20 +46,50 @@
 
 .horizontal-timeline {
   .vertical-timeline-element-content {
+    position: relative;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+
+    .vertical-timeline-element {
+      position: relative;
+      margin-bottom: 30px;
+    }
 
     .vertical-timeline-element-icon {
       background-color: rgba(38, 193, 126, 1) !important;
+      color: #fff;
+      border-radius: 50%;
+   
+      border: 3px solid #fff;
     }
 
-    .vertical-timeline::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 18px;
-      height: 100%;
-      width: 4px;
-      background: black;
-    }
+  
   }
+}
+.vertical-timeline {
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #38c17e !important;
+  }
+}
+@media (max-width: 768px) {
+  .vertical-timeline {
+    position: relative;
+  }
+
+  .vertical-timeline-element {
+    position: relative;
+    margin-bottom: 15px;
+  }
+}
+#experience {
+  overflow-x: hidden;
+  overflow-y: auto;
 }

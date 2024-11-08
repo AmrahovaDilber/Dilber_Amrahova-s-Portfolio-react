@@ -1,6 +1,5 @@
 import React from "react";
 import resume from "../assets/images/DilberAmrahovaCV.pdf";
-
 import "../assets/styles/DownloadCv.scss";
 
 export default function DownloadCv() {

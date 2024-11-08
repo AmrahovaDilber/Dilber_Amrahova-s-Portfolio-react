@@ -27,14 +27,12 @@ const Inner = () => {
         <About></About>
         <TimeLine data={timeLineData} />
         <Expertise data={experienceData} />
-        <Skills></Skills>
+       <Skills></Skills>
         <Portfolio data={portfolioData} />
         <div className="contactdiv">
-
         <Address></Address>
         <ContactMe></ContactMe>
         </div>
-     
         <Feedback data={feedbackData} />
         {/* Back-to-top button */}
         <Back></Back>

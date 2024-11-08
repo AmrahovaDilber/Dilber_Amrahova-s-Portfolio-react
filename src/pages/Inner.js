@@ -29,7 +29,7 @@ const Inner = () => {
         <Expertise data={experienceData} />
         <Skills></Skills>
         <Portfolio data={portfolioData} />
-        <div style={{display:"flex",justifyContent:"space-between",gap:"100px"}}>
+        <div className="contactdiv">
 
         <Address></Address>
         <ContactMe></ContactMe>

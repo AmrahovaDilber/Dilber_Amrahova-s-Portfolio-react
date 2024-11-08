@@ -60,3 +60,14 @@
     background-color: $secondary-color;
   }
 }
+
+
+.contactdiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include tablet {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

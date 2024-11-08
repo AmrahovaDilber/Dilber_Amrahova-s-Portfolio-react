@@ -19,8 +19,8 @@ function Expertise({ data }) {
             iconStyle={{
               background: 'rgba(38, 193, 126, 1)', 
               color: '#fff',
-              border: '3px solid #fff',  // Optional: adds a border around the icon
-              borderRadius: '50%',  // Ensures the icon is round
+              border: '3px solid #fff',  
+              borderRadius: '50%',   
             }}
             >
               <li className="experience-item">

@@ -9,7 +9,12 @@ import About from "../components/About.js";
 import Skills from "../components/Skills.js";
 import Back from "../components/BackToTop.js";
 import "../assets/styles/Inner.scss";
-import { experienceData, feedbackData, portfolioData ,timeLineData} from "../utils/data.js";
+import {
+  experienceData,
+  feedbackData,
+  portfolioData,
+  timeLineData,
+} from "../utils/data.js";
 import ContactMe from "../components/ContactMe.js";
 
 const Inner = () => {
@@ -27,11 +32,11 @@ const Inner = () => {
         <About></About>
         <TimeLine data={timeLineData} />
         <Expertise data={experienceData} />
-       <Skills></Skills>
+        <Skills></Skills>
         <Portfolio data={portfolioData} />
         <div className="contactdiv">
-        <Address></Address>
-        <ContactMe></ContactMe>
+          <Address></Address>
+          <ContactMe></ContactMe>
         </div>
         <Feedback data={feedbackData} />
         {/* Back-to-top button */}

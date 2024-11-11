@@ -1,6 +1,7 @@
 import photo from "../assets/images/myimage.jpeg";
 import card1 from "../assets/images/herseyburada.png";
 import card2 from "../assets/images/ramadan.png";
+import card3 from "../assets/images/shopcart.png";
 
 export const experienceData = [
   {
@@ -66,8 +67,14 @@ export const portfolioData = [
     img: card2, 
     url: "https://ramadanwebsite.netlify.app/",
   },
+  {
+    "title": "ShopCart",
+    "category": "code",
+    "text": "ShopCart is a dynamic and user-friendly e-commerce website designed to provide a seamless shopping experience. With an extensive range of products, intuitive navigation, it caters to a variety of customer needs. From browsing to purchasing, the platform is optimized for ease of use and a smooth shopping journey.",
+    "img": card3,
+    "url": "https://shopcart-ecommercewebsite.netlify.app/"
+}
 
- 
 ];
 
 export const feedbackData = [

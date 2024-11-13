@@ -5,14 +5,29 @@
   display: flex;
   flex-direction: column;
   position: fixed;
-  padding: 1rem;
+  transition: left 0.5s ease-in-out;
+  left: 0;
+  padding: 20px;
   height: 100%;
-  background: #222935;
+  background: $secondary-color;
+  width: 250px;
 
-  &-avatar {
-    width: 250px;
+  .collapse-btn {
+    width: 30px;
+    position: absolute;
+    top: 2.5rem;
+    right: -29px;
+    font-size: 25px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: #282c34;
+    color: #fff;
+    cursor: pointer;
   }
 
+  &.collapsed {
+    left: -250px;
+  }
   &__button {
     position: absolute;
     bottom: 1rem;
@@ -34,42 +49,52 @@
     font-weight: 700;
     text-align: center;
   }
+}
 
-  @include tablet {
-    .panel {
-      display: flex;
-      flex-direction: column;
-      padding: 1rem 2rem;
-      &-avatar {
-        width: 54px;
-      }
-
-      &-avatar img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 1px solid #ffffff;
-        margin-bottom: 10px;
-        margin-bottom: 4rem;
-        border: 0.5px solid #fff;
-      }
-
-      &__button {
-        left: 50%;
-        padding: 0.5rem 1rem;
-        background-color: #26c17e;
-        transition: 0.4s;
-        color: white;
-        cursor: pointer;
-        .text {
-          display: none !important;
-        }
-      }
+@include tablet {
+  .panel {
+    width: 54px;
+    padding: 1rem 1.5rem;
+    margin-right: 10px;
+    &.collapsed {
+      left: -54px;
     }
 
-    .photo-box .panel-avatar__name {
-      display: none;
+    .collapse-btn {
+      right: -54px;
+      left: 53px;
+      font-size: 20px;
+      border-radius: 0 5px 5px 0;
+      border: none;
+      background-color: #282c34;
+      color: #fff;
+      cursor: pointer;
     }
+
+    &-avatar .myimage2 {
+      width: 3rem;
+      align-self: center;
+      height: 3rem;
+      border-radius: 50%;
+      border: 1px solid #ffffff;
+      margin-bottom: 4rem;
+      border: 0.5px solid #fff;
+    }
+
+    &__button {
+      padding: 0.5rem 1rem;
+      background-color: #26c17e;
+      transition: 0.4s;
+      color: white;
+      cursor: pointer;
+      .text {
+        display: none !important;
+      }
+    }
+  }
+
+  .photo-box .panel-avatar__name {
+    display: none;
   }
 }
 

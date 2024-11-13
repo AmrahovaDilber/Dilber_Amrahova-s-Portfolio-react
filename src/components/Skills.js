@@ -11,6 +11,7 @@ import typescript from '../assets/images/typescript.png';
 import react from '../assets/images/react.webp';
 import git from '../assets/images/git.png';
 import next from '../assets/images/nexticon.svg';
+import contextapi from '../assets/images/contextapi.png'
 import '../assets/styles/skills.scss';
 
 const techs = [
@@ -21,8 +22,10 @@ const techs = [
   { src: js, name: "Javascript", percent: 75 },
   { src: typescript, name: "Typescript", percent: 70 },
   { src: react, name: "React", percent: 78 },
+  { src: contextapi, name: "ContextApi", percent: 70 },
   { src: git, name: "Git", percent: 81 },
   { src: next, name: "Next.js", percent: 70 },
+
 ];
 
 const Skills = () => {

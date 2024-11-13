@@ -28,6 +28,7 @@ const Inner = () => {
         />
       </aside>
 
+
       <section className={`container ${collapsed ? "collapsed" : ""}`}>
         <About></About>
         <TimeLine data={timeLineData} />

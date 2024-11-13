@@ -1,239 +1,72 @@
-.button {
-    display: inline-flex;
-    height: 40px;
-    padding: 0px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background-color: #222935;
-    border-radius: 5px;
-    transition: 150ms;
-  
-    .button__icon {
-      color: white;
-    }
-  
-    .button__text {
-      color: white;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 120%;
-      letter-spacing: 1px;
-    }
-    & :hover {
-      background-color: #26c17e;
-    }
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  position: relative;
+  max-width: 1200px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .skills-section {
-    padding: 0 10px;
-    margin-bottom: 50px;
-  
-    .skills-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: row;
-      flex-direction: flex-start;
-  
-      h2 {
-        color: #26c17e;
-        margin-bottom: 40px;
-        font: 700 25px/30px "Open Sans", sans-serif;
-      }
-  
-      .button {
-        display: flex;
-        justify-content: center;
-        align-items: row;
-        flex-direction: center;
-        width: fit-content;
-        height: 40px;
-        border: none;
-        padding: 0px 20px;
-        gap: 10px;
-        background-color: #222935;
-        border-radius: 5px;
-        transition: 200ms;
-        cursor: pointer;
-        margin-bottom: 20px;
-  
-        .button__text {
-          color: white;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 120%;
-          letter-spacing: 1px;
-        }
-  
-        &:hover {
-          background-color: #26c17e;
-        }
-      }
-    }
-  
-    .skills-edit-container {
-      border: 1px solid #26c17e;
-      border-radius: 5px;
-      padding: 20px;
-      margin-bottom: 40px;
-  
-      .error-message {
-        color: red;
-        font-size: 14px;
-        margin-top: -15px;
-        margin-bottom: 3px;
-      }
-  
-      .skill-name,
-      .skill-range {
-        margin-bottom: 20px;
-  
-        label {
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 120%;
-          margin-right: 2%;
-        }
-  
-        input {
-          width: 90%;
-          max-width: 270px;
-          height: 40px;
-          flex-shrink: 0;
-          border: 1px solid #667081;
-          border-radius: 5px;
-          padding-left: 10px;
-  
-          &::placeholder {
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 120%;
-          }
-        }
-      }
-  
-      .add-skill {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        width: fit-content;
-        height: 40px;
-        border: none;
-        padding: 0px 20px;
-        background-color: #222935;
-        border-radius: 5px;
-        transition: 200ms;
-        cursor: pointer;
-        color: white;
-        transition: 250ms;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 120%;
-        letter-spacing: 1px;
-  
-        &:hover {
-          background-color: #26c17e;
-        }
-      }
-    }
-  
-    .skills-list-container {
-      width: 100%;
-      margin-bottom: 30px;
-  
-      .skills-list {
-        .skill {
-          background-color: #26c17e;
-          width: 10%;
-          height: 29px;
-          margin-bottom: 5px;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          flex-direction: row;
-  
-          span {
-            color: white;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            padding-left: 15px;
-          }
-        }
-      }
-    }
-  
-    .skills-levels {
-      height: 30px;
-      border-top: 1px solid #667081;
-  
-      .borders {
-        position: relative;
-        justify-content: space-between;
-        display: flex;
-        bottom: 10px;
-  
-        .span1 {
-          width: 1px;
-          height: 10px;
-          border-left: 1px solid #667081;
-          flex-grow: 2;
-        }
-  
-        .span2 {
-          flex-grow: 3;
-          width: 1px;
-          height: 10px;
-          border-left: 1px solid #667081;
-          position: relative;
-          left: 54px;
-        }
-  
-        .span3 {
-          flex-grow: 3;
-          width: 1px;
-          height: 10px;
-          border-right: 1px solid #667081;
-          position: relative;
-          right: 30px;
-        }
-  
-        .span4 {
-          flex-grow: 2;
-          width: 1px;
-          height: 10px;
-          border-right: 1px solid #667081;
-        }
-      }
-  
-      .levels {
-        position: relative;
-        justify-content: space-between;
-        display: flex;
-  
-        .beginner {
-          flex-grow: 1;
-        }
-  
-        .proficient {
-          flex-grow: 3;
-        }
-  
-        .export {
-          flex-grow: 3;
-        }
-  
-        .master {
-          flex-grow: 1;
-          text-align: right;
-        }
-      }
-    }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+}
+
+.techName {
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.slider-arrows {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+}
+.techImageContainer {
+  width: 140px;
+  height: 140px;
+  background-color: #222935;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: border 0.3s ease-in-out;
+
+  &:hover {
+    border: 3px solid #26c17e;
+  }
+
+  img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+}

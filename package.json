@@ -26,6 +26,7 @@
     "react-type-animation": "^3.2.0",
     "react-vertical-timeline-component": "^3.6.0",
     "sass": "^1.69.4",
+    "swiper": "^11.1.14",
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
   },

@@ -1,116 +1,74 @@
-import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit } from "@fortawesome/free-solid-svg-icons";
-import { useSelector, useDispatch } from "react-redux";
-import { getSkills, addSkill } from "../app/actions/skillsAction";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
+import React from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import Box from "../components/Box";
-import "../assets/styles/skills.scss";
+import html from '../assets/images/html.png';
+import css from '../assets/images/cssic.webp';
+import tailwind from '../assets/images/tailwindd.svg';
+import sass from '../assets/images/sass.webp';
+import js from '../assets/images/jsicon.png';
+import typescript from '../assets/images/typescript.png';
+import react from '../assets/images/react.webp';
+import git from '../assets/images/git.png';
+import next from '../assets/images/nexticon.svg';
+import '../assets/styles/skills.scss';
 
+const techs = [
+  { src: html, name: "HTML", percent: 100 },
+  { src: css, name: "CSS", percent: 95 },
+  { src: tailwind, name: "Tailwindcss", percent: 93 },
+  { src: sass, name: "Sass", percent: 86 },
+  { src: js, name: "Javascript", percent: 75 },
+  { src: typescript, name: "Typescript", percent: 70 },
+  { src: react, name: "React", percent: 78 },
+  { src: git, name: "Git", percent: 81 },
+  { src: next, name: "Next.js", percent: 70 },
+];
 
 const Skills = () => {
-  const [skillOpen, setSkillsOpen] = useState(false);
-  const { data } = useSelector((state) => state.skillsReducer);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getSkills());
-    // eslint-disable-next-line
-  }, []);
-
-  const initialValues = {
-    skill: "",
-    range: "",
-  };
-
-  const validationSchema = Yup.object().shape({
-    skill: Yup.string().required("Skill name is a required field"),
-    range: Yup.number()
-      .typeError("Skill range must be a `number` type")
-      .required("Skill range is a required field")
-      .min(10, "Skill range must be greater than or equal to 10")
-      .max(100, "Skill range must be less than or equal to 100"),
+  
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.2,   
   });
 
-  const onSubmit = (values, { resetForm }) => {
-    const newSkill = {
-      name: values.skill,
-      range: values.range,
-    };
-    dispatch(addSkill(newSkill));
-    resetForm();
-  };
+ 
+  if (inView) {
+    controls.start('visible');
+  }
 
   return (
-    <Box id="skills" title="Skills" >
-      <div className="skills-section">
-        <div className="skills-head">
-          <h></h>
-          <button className="button" onClick={() => setSkillsOpen(!skillOpen)}>
-            <FontAwesomeIcon icon={faEdit} color="white" />
-            <p className="button__text">Open edit</p>
-          </button>
-        </div>
-        <Formik
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={onSubmit}
-        >
-          <Form
-            className="skills-edit-container"
-            style={{ display: skillOpen ? "block" : "none" }}
+    <Box id="skills" title="Skills">
+      <div ref={ref} className="skillsGrid">
+        {techs.map((tech, index) => (
+          <motion.div
+            key={index}
+            className="techItem"
+            initial="hidden"
+            animate={controls}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.1,
+              ease: 'easeOut'
+            }}
           >
-            <div className="skill-name">
-              <label htmlFor="skill">Skill name</label>
-              <Field type="text" name="skill" placeholder="Enter skill name" />
+            <div className="techImageContainer">
+              <img
+                src={tech.src}
+                alt={tech.name}
+              />
             </div>
-            <ErrorMessage
-              name="skill"
-              component="p"
-              className="error-message"
-            />
-            <div className="skill-range">
-              <label htmlFor="range">Skill range</label>
-              <Field type="text" name="range" placeholder="Enter skill range" />
-            </div>
-            <ErrorMessage
-              name="range"
-              component="p"
-              className="error-message"
-            />
-            <button className="add-skill" type="submit">
-              Add skill
-            </button>
-          </Form>
-        </Formik>
-        <div className="skills-list-container">
-          <ul className="skills-list">
-            {data.map(({ name, range }, i) => (
-              <li key={i} className="skill" style={{ width: `${range}%` }}>
-                <span>{name}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="skills-levels">
-          <div className="borders">
-            <span className="span1"></span>
-            <span className="span2"></span>
-            <span className="span3"></span>
-            <span className="span4"></span>
-          </div>
-          <div className="levels">
-            <span className="beginner">Beginner</span>
-            <span className="proficient">Proficient</span>
-            <span className="expert">Expert</span>
-            <span className="master">Master</span>
-          </div>
-        </div>
+            <p className="techName">{tech.name}</p>
+          </motion.div>
+        ))}
       </div>
     </Box>
   );
 };
 
 export default Skills;
-

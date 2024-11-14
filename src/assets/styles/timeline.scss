@@ -1,9 +1,13 @@
 @import "_variables.scss";
 @import "_mediaQuery.scss";
 
-
 .timeline {
   border-radius: 15px;
+  padding: 20px;
+
+  // Use a responsive max-width to keep content in a readable container on larger screens
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .timeline-event {
@@ -25,9 +29,7 @@
     border-radius: 50%;
   }
 
-
   &:hover {
-  
     transition: box-shadow 0.3s ease;
   }
 }
@@ -77,5 +79,71 @@
   &:hover {
     background-color: #e0f7ea;
     transition: background-color 0.3s ease;
+  }
+}
+
+/* Media queries for responsiveness */
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+  .timeline-event {
+    padding-left: 40px;
+
+    &::before {
+      left: 20px;
+    }
+  }
+
+  .event-details {
+    padding: 15px;
+
+    &__title {
+      font-size: 1.1rem;
+    }
+    
+    &__text {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 576px) {
+  .timeline-event {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 10px;
+    position: relative;
+
+    &::before {
+      left: 10px;
+      top: 10px;
+    }
+  }
+  .event__date {
+    margin-left:15px;
+  }
+
+  .event {
+    align-items: flex-start;
+    margin-bottom: 10px;
+
+    &__line {
+      width: 2px; // Adjust line width for smaller screens
+      height: 60px; // Reduce line height for smaller screens
+    }
+  }
+
+  .event-details {
+
+    padding: 10px;
+
+    &__title {
+      font-size: 1rem;
+    }
+    
+    &__text {
+      font-size: 0.85rem;
+    }
   }
 }

@@ -1,56 +1,96 @@
-/* About.css */
-
 .about-container {
-    color: #2d3748; /* Text color for light mode */
-    line-height: 1.5;
-    font-size: 1.125rem; /* Default font size for text */
-    transition: all 0.3s ease;
+  color: #2d3748; 
+  line-height: 1.5;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+
+}
+
+.about-container p,
+.about-container ul {
+  margin-bottom: 0.2rem;
+}
+
+.about-container h2 {
+  font-size: 1.36rem;
+  font-weight: 600;
+}
+
+.about-container ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.about-container ul li {
+  margin-bottom: 0.44rem;
+}
+
+.about-container strong {
+  font-weight: 700;
+}
+
+.about-quote {
+  font-style: italic;
+  color: #4a5568;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+}
+
+
+@media (min-width: 768px) {
+  .about-container {
+    font-size: 1.1rem; 
   }
-  
+}
+
+
+@media (max-width: 768px) {
+  .about-container {
+    font-size: 1rem; 
+    padding: 1rem 0.5rem;
+  }
+
   .about-container p,
   .about-container ul {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem; 
+    font-size: 12px;
   }
-  
+
   .about-container h2 {
-    font-size: 1.36rem;
-    font-weight: 600;
-    
+    font-size: 1.2rem; 
   }
-  
+
   .about-container ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
   }
-  
+
   .about-container ul li {
-    margin-bottom: 0.44rem;
+    margin-bottom: 0.5rem; 
   }
-  
-  .about-container strong {
-    font-weight: 700;
-  }
-  
-  /* Styling for Quote */
+
   .about-quote {
-    font-style: italic;
-    color: #4a5568;
+    font-size: 1rem; 
     margin-top: 1rem;
-    font-size: 1.125rem;
   }
-  
-  /* Media query for larger screens */
-  @media (min-width: 768px) {
-    .about-container {
-      font-size: 1.1rem; /* Larger font size for larger screens */
-   
-    }
+}
+
+
+@media (max-width: 480px) {
+  .about-container {
+    font-size: 0.95rem;
+    padding: 1rem 0.25rem; 
   }
-  
-  .dark-mode .about-container {
-    color: #f7fafc; /* Text color for dark mode */
+
+  .about-container h2 {
+    font-size: 1.1rem; 
   }
-  
-  .dark-mode .about-quote {
-    color: #e2e8f0;
+
+  .about-quote {
+    font-size: 0.95rem; 
+    margin-top: 1rem;
   }
+
+  .about-container ul {
+    padding-left: 0.5rem; 
+  }
+}

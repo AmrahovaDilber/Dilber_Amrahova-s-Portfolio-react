@@ -104,6 +104,9 @@
     h3 {
       font-size: 1.1rem;
     }
+    .experience-company{
+      font-size: 1rem;
+    }
 
     .experience-description {
       font-size: 0.9rem;
@@ -112,7 +115,7 @@
 
   .vertical-timeline {
     position: relative;
-    padding-left: 30px; // Adjust padding to keep the line visible
+    padding-left: 30px;
   }
 
   .vertical-timeline-element {
@@ -124,7 +127,6 @@
   }
 }
 
-// Adjustments for small devices (phones)
 @media (max-width: 576px) {
   .experience-item {
     padding-left: 0;
@@ -153,7 +155,7 @@
   }
 
   .vertical-timeline-element-icon {
-    margin-left: -10px;
+    margin-left: 0px;
   }
 
   .vertical-timeline-element-content {

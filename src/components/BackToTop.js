@@ -29,7 +29,7 @@ export default function BackToTop() {
         <button
           style={{
             position: "fixed",
-            right: "20px",
+            right: "10px",
             bottom: "30px",
             borderRadius: "50%",
             width: "40px",

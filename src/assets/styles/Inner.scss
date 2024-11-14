@@ -20,16 +20,18 @@
 
   overflow: hidden;
   @include tablet {
-    margin-left: 1rem;
-    padding-left: 50px;
+    margin-left: 5.5rem;
+    // padding-left: 60px;
     margin-right: 1rem;
     padding-right: 0px;
   }
 }
 .container.collapsed {
-  margin-left: 30px;
+  
   @include tablet {
-    margin-left: 0rem;
+    margin-left: 1.9rem;
+    // padding-left: 60px;
+  
   }
   .vertical-timeline{
     max-width: 100%;

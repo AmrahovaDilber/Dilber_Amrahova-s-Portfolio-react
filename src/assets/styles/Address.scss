@@ -3,7 +3,8 @@
   flex-direction: row;
   justify-content: flex-start;
   margin-bottom: 25px;
-  gap: 40px;
+  gap: 20px;
+  width: 100%;
 
   & h3 {
     font-size: 16px;
@@ -16,4 +17,18 @@
   color: #667081;
   font-size: 16px;
   font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    gap: 0px;
+
+    h3 {
+      font-size: 14px;
+    }
+
+    .link {
+      font-size: 14px;
+    }
+  }
 }

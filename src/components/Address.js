@@ -52,7 +52,7 @@ const Address = () => {
         <div>
           <h3>Facebook</h3>
           <Link to="https://www.facebook.com/facebook">
-            <span className="link">https://www.facebook.com/facebook</span>
+            <span className="link">https://www.facebook.com</span>
           </Link>
         </div>
       </div>

@@ -70,7 +70,7 @@ export const portfolioData = [
   {
     "title": "ShopCart",
     "category": "code",
-    "text": "ShopCart is a dynamic and user-friendly e-commerce website designed to provide a seamless shopping experience. With an extensive range of products, intuitive navigation, it caters to a variety of customer needs. From browsing to purchasing, the platform is optimized for ease of use and a smooth shopping journey.",
+    "text": "ShopCart is a user-friendly e-commerce site offering a seamless shopping experience. With a wide range of products and easy navigation, it’s designed for a smooth and hassle-free journey from browsing to purchasing.",
     "img": card3,
     "url": "https://shopcart-ecommercewebsite.netlify.app/"
 }

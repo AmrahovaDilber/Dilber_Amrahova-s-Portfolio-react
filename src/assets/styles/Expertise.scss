@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 10px;
 
   h4 {
     font-size: 1.1rem;
@@ -31,24 +32,29 @@
   h3 {
     font-size: 1.2rem;
     font-weight: 600;
+    margin-bottom: 5px;
   }
 
   .experience-description {
     font-size: 1rem;
     line-height: 1.3;
     color: #4a4a4a;
+    margin-top: 5px;
   }
 
+  // Adjust padding for tablets
   @include tablet {
     padding-left: 40px;
   }
 }
 
+// Styling for horizontal timeline elements
 .horizontal-timeline {
   .vertical-timeline-element-content {
     position: relative;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 15px;
+    border-radius: 10px;
 
     .vertical-timeline-element {
       position: relative;
@@ -59,14 +65,16 @@
       background-color: rgba(38, 193, 126, 1) !important;
       color: #fff;
       border-radius: 50%;
-
       border: 3px solid #fff;
     }
   }
 }
+
+// Styling for the vertical timeline with responsive adjustments
 .vertical-timeline {
   overflow: hidden;
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
@@ -77,17 +85,92 @@
     background-color: #38c17e !important;
   }
 }
+
+// Adjustments for medium devices
 @media (max-width: 768px) {
+  .experience-item {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .experience-details {
+    padding-left: 0;
+    padding-top: 10px;
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    .experience-description {
+      font-size: 0.9rem;
+    }
+  }
+
   .vertical-timeline {
     position: relative;
+    padding-left: 30px; // Adjust padding to keep the line visible
   }
 
   .vertical-timeline-element {
-    position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  .vertical-timeline-element-content {
+    padding: 10px;
   }
 }
+
+// Adjustments for small devices (phones)
+@media (max-width: 576px) {
+  .experience-item {
+    padding-left: 0;
+    flex-direction: column;
+  }
+
+  .experience-details {
+    padding-left: 0;
+    padding-top: 10px;
+
+    h4 {
+      font-size: 0.95rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    .experience-description {
+      font-size: 0.85rem;
+    }
+  }
+
+  .vertical-timeline {
+    padding-left: 25px; 
+  }
+
+  .vertical-timeline-element-icon {
+    margin-left: -10px;
+  }
+
+  .vertical-timeline-element-content {
+    padding: 0px;
+  }
+
+  .experience-item {
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
 #experience {
   overflow-x: hidden;
   overflow-y: auto;
+  max-width: 1200px; 
+  margin: 0 auto;
 }

@@ -1,0 +1,81 @@
+.contactme_form {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 60px;
+  background-color: #222935;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.contactme_form .contactme_title {
+  text-align: center;
+  color: rgb(38, 193, 126);
+}
+.contactme_form .contactme_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.contactme_form .contactme_grid .contactme_full-width,
+.contactme_form .contactme_grid .email-group {
+  grid-column: 1/-1;
+}
+@media (max-width: 768px) {
+  .contactme_form .contactme_grid {
+    grid-template-columns: 1fr;
+  }
+}
+.contactme_form .contactme_input-group {
+  display: flex;
+  flex-direction: column;
+}
+.contactme_form .contactme_input-group input,
+.contactme_form .contactme_input-group textarea {
+  width: 100%;
+  padding: 14px;
+  background-color: #ffffff;
+  border: 1px solid rgb(102, 112, 129);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #222935;
+  transition: 0.3s ease;
+}
+.contactme_form .contactme_input-group input::-moz-placeholder, .contactme_form .contactme_input-group textarea::-moz-placeholder {
+  color: rgb(102, 112, 129);
+}
+.contactme_form .contactme_input-group input::placeholder,
+.contactme_form .contactme_input-group textarea::placeholder {
+  color: rgb(102, 112, 129);
+}
+.contactme_form .contactme_input-group input:focus,
+.contactme_form .contactme_input-group textarea:focus {
+  border-color: rgb(38, 193, 126);
+  box-shadow: 0 0 8px rgba(38, 193, 126, 0.5);
+  outline: none;
+}
+.contactme_form .contactme_input-group textarea {
+  resize: none;
+}
+.contactme_form .contactme_input-group .contactme_error {
+  margin-top: 4px;
+  font-size: 0.875rem;
+  color: rgb(255, 77, 79);
+}
+.contactme_form .contactme_button {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 14px;
+  background-color: rgb(38, 193, 126);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contactme_form .contactme_button:hover {
+  background-color: #1e9662;
+}/*# sourceMappingURL=ContactMe.css.map */

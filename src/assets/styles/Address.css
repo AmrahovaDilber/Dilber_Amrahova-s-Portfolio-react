@@ -1,0 +1,31 @@
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+  gap: 20px;
+  width: 100%;
+}
+.contacts h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222935;
+}
+
+.link {
+  color: #667081;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    gap: 15px;
+  }
+  .contacts h3 {
+    font-size: 14px;
+  }
+  .contacts .link {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=Address.css.map */

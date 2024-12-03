@@ -1,0 +1,75 @@
+/* Skills.module.scss */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .skillsGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.techItem:hover {
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.techName {
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.slider-arrows {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+}
+
+.techImageContainer {
+  width: 100%;
+  max-width: 140px;
+  height: 140px;
+  background-color: #222935;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: border 0.3s ease-in-out;
+  padding: 0.5rem;
+}
+.techImageContainer:hover {
+  border: 3px solid #26c17e;
+}
+.techImageContainer img {
+  width: 90px;
+  height: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}/*# sourceMappingURL=skills.css.map */

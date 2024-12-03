@@ -1,0 +1,67 @@
+.main {
+  display: flex;
+}
+
+.contactdiv {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .contactdiv {
+    flex-direction: column;
+  }
+}
+
+.container {
+  transition: margin-left 0.5s ease-in-out;
+  margin-left: 18rem;
+  margin-right: 3rem;
+  padding-right: 20px;
+  height: auto;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  .container {
+    margin-left: 5.5rem;
+    margin-right: 1rem;
+    padding-right: 0px;
+  }
+}
+
+.container.collapsed {
+  margin-left: 1.9rem;
+}
+@media (max-width: 600px) {
+  .container.collapsed {
+    margin-left: 1.9rem;
+  }
+}
+.container.collapsed .vertical-timeline {
+  max-width: 100%;
+}
+
+.back-to-top-button {
+  width: 35px;
+  height: 35px;
+  background-color: #222935;
+  position: fixed;
+  right: 48px;
+  bottom: 1px;
+  color: #fff;
+  font-size: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.back-to-top-button:hover {
+  background-color: #222935;
+}
+@media (max-width: 600px) {
+  .back-to-top-button {
+    right: 15px;
+  }
+}/*# sourceMappingURL=Inner.css.map */

@@ -1,0 +1,42 @@
+.nav {
+  color: #667081;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+@media (max-width: 600px) {
+  .nav {
+    padding: 0;
+  }
+}
+
+.nav-list {
+  display: flex;
+  gap: 36px;
+  flex-direction: column;
+}
+@media (max-width: 600px) {
+  .nav-list {
+    align-items: center;
+  }
+}
+
+.nav-list a:hover {
+  color: rgb(38, 193, 126);
+}
+
+@media (max-width: 600px) {
+  .nav-text {
+    display: none;
+  }
+}
+
+.active {
+  color: rgb(38, 193, 126);
+}
+
+.nav-item-wrapper {
+  display: flex;
+  gap: 20px;
+}/*# sourceMappingURL=Navigation.css.map */

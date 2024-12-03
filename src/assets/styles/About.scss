@@ -1,19 +1,21 @@
 .about-container {
-  color: #2d3748; 
-  line-height: 1.5;
-  font-size: 1.125rem;
-  transition: all 0.3s ease;
-
+  color: #2d3748;
+  line-height: 1.6;
+  font-size: 1rem;
+  transition: color 0.3s ease, font-size 0.3s ease;
+ 
 }
 
 .about-container p,
 .about-container ul {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.8rem;
 }
 
 .about-container h2 {
-  font-size: 1.36rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
 }
 
 .about-container ul {
@@ -22,75 +24,81 @@
 }
 
 .about-container ul li {
-  margin-bottom: 0.44rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
 .about-container strong {
   font-weight: 700;
+  color: #1a202c;
 }
 
 .about-quote {
   font-style: italic;
   color: #4a5568;
-  margin-top: 1rem;
+
   font-size: 1.125rem;
+  
+  line-height: 1.5;
+ 
+
 }
 
-
+/* Medium Devices */
 @media (min-width: 768px) {
   .about-container {
-    font-size: 1.1rem; 
+    font-size: 1.125rem;
+   
+  }
+
+  .about-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .about-quote {
+    font-size: 1.25rem;
   }
 }
 
-
+/* Small Devices */
 @media (max-width: 768px) {
   .about-container {
-    font-size: 1rem; 
-    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    padding: 1rem;
   }
 
   .about-container p,
   .about-container ul {
-    margin-bottom: 0.5rem; 
-    font-size: 12px;
+    margin-bottom: 0.6rem;
   }
 
   .about-container h2 {
-    font-size: 1.2rem; 
+    font-size: 1.4rem;
+  }
+
+  .about-quote {
+    font-size: 1.1rem;
   }
 
   .about-container ul {
     padding-left: 1rem;
   }
-
-  .about-container ul li {
-    margin-bottom: 0.5rem; 
-  }
-
-  .about-quote {
-    font-size: 1rem; 
-    margin-top: 1rem;
-  }
 }
 
-
+/* Extra Small Devices */
 @media (max-width: 480px) {
   .about-container {
     font-size: 0.95rem;
-    padding: 1rem 0.25rem; 
+    padding: 0.75rem;
   }
 
   .about-container h2 {
-    font-size: 1.1rem; 
+    font-size: 1.3rem;
   }
 
-  .about-quote {
-    font-size: 0.95rem; 
-    margin-top: 1rem;
-  }
+
 
   .about-container ul {
-    padding-left: 0.5rem; 
+    padding-left: 0.75rem;
   }
 }

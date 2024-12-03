@@ -1,0 +1,124 @@
+.timeline {
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 50px;
+  opacity: 0;
+}
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #26c17e;
+  border-radius: 50%;
+}
+.timeline-event:hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+.event__date {
+  color: #222935;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.event__line {
+  margin: 15px 0;
+  width: 3px;
+  height: 80px;
+  background-color: #26c17e;
+  border-radius: 5px;
+}
+
+.event-details {
+  margin-left: 20px;
+  background-color: #eeeeee;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.event-details__title {
+  font-size: 1.25rem;
+  color: #222935;
+  margin-bottom: 10px;
+}
+.event-details__text {
+  font-size: 1rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+.event-details:hover {
+  background-color: #e0f7ea;
+  transition: background-color 0.3s ease;
+}
+
+/* Media queries for responsiveness */
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+  .timeline-event {
+    padding-left: 40px;
+  }
+  .timeline-event::before {
+    left: 20px;
+  }
+  .event-details {
+    padding: 15px;
+  }
+  .event-details__title {
+    font-size: 1.1rem;
+  }
+  .event-details__text {
+    font-size: 0.9rem;
+  }
+}
+/* Small devices (phones) */
+@media (max-width: 576px) {
+  .timeline-event {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 10px;
+    position: relative;
+  }
+  .timeline-event::before {
+    left: 10px;
+    top: 10px;
+  }
+  .event__date {
+    margin-left: 15px;
+  }
+  .event {
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .event__line {
+    width: 2px;
+    height: 60px;
+  }
+  .event-details {
+    padding: 10px;
+  }
+  .event-details__title {
+    font-size: 1rem;
+  }
+  .event-details__text {
+    font-size: 0.85rem;
+  }
+}/*# sourceMappingURL=timeline.css.map */

@@ -1,0 +1,100 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  transition: left 0.5s ease-in-out;
+  left: 0;
+  padding: 20px;
+  height: 100%;
+  background: #222935;
+  width: 250px;
+}
+.panel .collapse-btn {
+  width: 30px;
+  position: absolute;
+  top: 1.2rem;
+  right: -29px;
+  font-size: 25px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background-color: #282c34;
+  color: #fff;
+  cursor: pointer;
+}
+.panel.collapsed {
+  left: -250px;
+}
+.panel__button {
+  position: absolute;
+  bottom: 1rem;
+  color: #fff;
+  background-color: #222935;
+  border: none;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.panel__button:hover {
+  background-color: #26c17e;
+}
+.panel .panel-avatar__name {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .panel {
+    width: 54px;
+    padding: 1rem 1.5rem;
+    margin-right: 10px;
+  }
+  .panel.collapsed {
+    left: -54px;
+  }
+  .panel .collapse-btn {
+    right: -54px;
+    left: 53px;
+    font-size: 20px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: #282c34;
+    color: #fff;
+    cursor: pointer;
+  }
+  .panel-avatar .myimage2 {
+    width: 3rem;
+    align-self: center;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    margin-bottom: 4rem;
+    border: 0.5px solid #fff;
+  }
+  .panel__button {
+    padding: 0.5rem 1rem;
+    background-color: #26c17e;
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+  }
+  .panel__button .text {
+    display: none !important;
+  }
+  .photo-box .panel-avatar__name {
+    display: none;
+  }
+}
+@media (min-width: 601px) {
+  .panel-avatar img {
+    display: flex;
+    align-self: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=Panel.css.map */

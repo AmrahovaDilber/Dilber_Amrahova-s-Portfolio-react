@@ -31,7 +31,7 @@ const Home = () => {
                 2000,
               ]}
               speed={60}
-              style={{ fontSize: "1em", display: "inline-block" }}
+              style={{ fontSize: "1.3em", display: "inline-block",marginTop:'30px' }}
               repeat={Infinity}
             />
           }

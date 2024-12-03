@@ -1,0 +1,24 @@
+.feedback {
+  margin-bottom: 20px;
+}
+
+.reporter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.reporter__photo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5rem;
+}
+
+.reporter-name {
+  margin-bottom: 5 px;
+}
+
+.cite-link {
+  color: #26c17e;
+}/*# sourceMappingURL=Feedback.css.map */
